@@ -1,7 +1,7 @@
 import React, { FunctionComponent } from 'react';
 
 import { Container } from './styles';
-import Filters from "../Filters";
+import Filters from "../FiltersContainer";
 import VehiclesList from "../VehiclesList";
 
 const MainView: FunctionComponent = () => {

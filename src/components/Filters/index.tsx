@@ -1,12 +1,21 @@
-import React from 'react';
+import React, { FunctionComponent } from 'react';
 import { Container } from "./styles";
 
-const Filters = () => {
+interface LevelsProps {
+  data: string[];
+  title: string;
+}
+
+const Filters: FunctionComponent<LevelsProps> = ({ title, data }) => {
   return (
     <Container>
-      <div>search field</div>
-      <div>levels</div>
-      <div>type</div>
+      <h4>{title}</h4>
+      {data.map((filter) => (
+        <label className="custom-radio">{filter}
+          <input type="radio" name="radio" />
+            <span className="checkmark"/>
+        </label>
+      ))}
     </Container>
   );
 };
