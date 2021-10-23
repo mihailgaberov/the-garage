@@ -20,7 +20,7 @@ const VehiclesList: FunctionComponent<VehiclesListProps> = ({ vehicles }) => {
 
   useEffect(() => {
     setPaginatedVehicles(pageNum);
-  }, [vehicles])
+  }, [vehicles, pageNum])
 
   const getVisibleVehicles = (allVehicles: VehicleSlotProps[], pageNum: number): VehicleSlotProps[] => {
     const startSlice: number = pageNum === 0 ? 0 : pageNum * VISIBLE_VEHICLES_PAGE_PAGE;

@@ -5,7 +5,6 @@ import Filters from "../FiltersContainer";
 import VehiclesList from "../VehiclesList";
 import { VehicleSlotProps } from "../VehicleSlot";
 
-
 interface GarageData {
   slots: number;
   levels: number;
@@ -34,9 +33,14 @@ const MainView: FunctionComponent = () => {
     loadData();
   }, []);
 
+  const handleFiltering = (e: React.FormEvent<HTMLInputElement>) => {
+    console.log(">>>> handle filtering: ", e.currentTarget.value);
+
+  };
+
   return (
     <Container>
-      <Filters />
+      <Filters levelsCount={data?.levels} handleFiltering={handleFiltering} />
       <VehiclesList vehicles={data?.vehicles} />
     </Container>
   );
