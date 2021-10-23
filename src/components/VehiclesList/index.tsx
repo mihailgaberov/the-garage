@@ -6,7 +6,7 @@ import ListView from "../ListView";
 const VehiclesList: FunctionComponent = () => {
   return (
     <Container>
-      <PaginationControls />
+      <PaginationControls totalCount={100} handlePaginate={(direction) => console.log("Paginate to: ", direction)} />
       <ListView />
     </Container>
   );

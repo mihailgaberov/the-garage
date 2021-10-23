@@ -2,22 +2,21 @@ import React, { FunctionComponent } from 'react';
 import { Container } from "./styles";
 import { StyledArrow } from "./StyledArrow";
 
-const PaginationControls: FunctionComponent = () => {
+interface PaginationControlsProps {
+  totalCount: number;
+  handlePaginate: (direction: string) => void;
+}
+
+const PaginationControls: FunctionComponent<PaginationControlsProps> = ({totalCount, handlePaginate}) => {
   return (
     <Container>
-      <div className='current-count'>
-        <span>1</span><span>10</span>
-      </div>
+      <div className='current-count'><span>1</span><span>10</span></div>
       <div className='separator'>/</div>
-      <div className='total-count'>
-        100
-      </div>
-      <div className='text'>
-        Vehicles
-      </div>
+      <div className='total-count'>{totalCount}</div>
+      <div className='text'>Vehicles</div>
       <div className='controls'>
-        <button onClick={() => console.log('paginate back')}><StyledArrow direction='up' isEnabled={false} /></button>
-        <button onClick={() => console.log('paginate forward')}><StyledArrow direction='down' isEnabled={true} /></button>
+        <button onClick={() => handlePaginate('back')}><StyledArrow direction='up' isEnabled={false} /></button>
+        <button onClick={() => handlePaginate('forward')}><StyledArrow direction='down' isEnabled={true} /></button>
       </div>
     </Container>
   );
