@@ -11,7 +11,7 @@ const Filters: FunctionComponent<LevelsProps> = ({ title, data }) => {
     <Container>
       <h4>{title}</h4>
       {data.map((filter) => (
-        <label className="custom-radio">{filter}
+        <label key={filter} className="custom-radio">{filter}
           <input type="radio" name="radio" />
             <span className="checkmark"/>
         </label>
