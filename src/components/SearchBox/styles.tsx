@@ -19,6 +19,5 @@ export const Container = styled.label`
     padding: 10px 30px;
     border: none;
     background-color: #fdf1e8;
-    margin-left: .3em;
   }
 `
