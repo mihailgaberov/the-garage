@@ -7,7 +7,9 @@ const VehiclesList: FunctionComponent = () => {
   return (
     <Container>
       <PaginationControls totalCount={100} handlePaginate={(direction) => console.log("Paginate to: ", direction)} />
-      <ListView />
+      <ListView slots={[
+        {licenseNumber: 'XBZ 123', vehicleType: 'Car', slotNumber: 12, levelNumber: 3}
+      ]} />
     </Container>
   );
 };
