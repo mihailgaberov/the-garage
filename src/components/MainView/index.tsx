@@ -37,7 +37,7 @@ const MainView: FunctionComponent = () => {
   return (
     <Container>
       <Filters />
-      <VehiclesList vehicles={data?.vehicles} totalCount={data?.vehicles.length} />
+      <VehiclesList vehicles={data?.vehicles} />
     </Container>
   );
 };
