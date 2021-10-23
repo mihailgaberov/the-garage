@@ -12,15 +12,9 @@ export default createGlobalStyle`
   #root {
     margin: 0 auto;
     --primaryLightColor: #9b4a10;
-    --primaryDarkColor: black;
   }
 
   body {
     background-color: #fff;
   }
 `
-
-export const COLORS = {
-  primaryLightColor: '#9b4a10',
-  primaryDarkColor: 'black'
-}
