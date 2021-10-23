@@ -3,17 +3,17 @@ import { Container } from "./styles";
 import VehicleSlot, { VehicleSlotProps } from "../VehicleSlot";
 
 interface ListViewProps {
-  slots: VehicleSlotProps[];
+  vehicles?: VehicleSlotProps[];
 }
 
-const ListView: FunctionComponent<ListViewProps> = ({ slots }) => {
+const ListView: FunctionComponent<ListViewProps> = ({ vehicles }) => {
   return (
     <Container>
-      {slots.map(slot => <VehicleSlot key={slot.licenseNumber}
-                                      licenseNumber={slot.licenseNumber}
-                                      vehicleType={slot.vehicleType}
-                                      levelNumber={slot.levelNumber}
-                                      slotNumber={slot.slotNumber} />
+      {vehicles?.map(vehicle => <VehicleSlot key={vehicle.licenseNumber}
+                                         licenseNumber={vehicle.licenseNumber}
+                                         vehicleType={vehicle.vehicleType}
+                                         levelNumber={vehicle.levelNumber}
+                                         slotNumber={vehicle.slotNumber} />
       )}
     </Container>
   );

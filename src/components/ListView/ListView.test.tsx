@@ -4,7 +4,7 @@ import { render, screen } from '@testing-library/react';
 import ListView from './index';
 
 test('renders ListView component', () => {
-  render(<ListView slots={[
+  render(<ListView vehicles={[
     {licenseNumber: 'XBZ 123', vehicleType: 'Car', slotNumber: 12, levelNumber: 3},
     {licenseNumber: 'X - M 879', vehicleType: 'Motorbike', slotNumber: 2, levelNumber: 1}
   ]} />);

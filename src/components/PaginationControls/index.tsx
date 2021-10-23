@@ -3,7 +3,7 @@ import { Container } from "./styles";
 import { StyledArrow } from "./StyledArrow";
 
 interface PaginationControlsProps {
-  totalCount: number;
+  totalCount?: number;
   handlePaginate: (direction: string) => void;
 }
 

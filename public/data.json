@@ -1,0 +1,606 @@
+{
+  "levels": 5,
+  "slots": 25,
+  "vehicles": [
+    {
+      "licenseNumber": "XBZ 120",
+      "vehicleType": "Car",
+      "slotNumber": 1,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 121",
+      "vehicleType": "Motorbike",
+      "slotNumber": 2,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 122",
+      "vehicleType": "Car",
+      "slotNumber": 3,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 123",
+      "vehicleType": "Motorbike",
+      "slotNumber": 4,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 124",
+      "vehicleType": "Car",
+      "slotNumber": 5,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 125",
+      "vehicleType": "Motorbike",
+      "slotNumber": 6,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 126",
+      "vehicleType": "Car",
+      "slotNumber": 7,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 127",
+      "vehicleType": "Motorbike",
+      "slotNumber": 8,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 128",
+      "vehicleType": "Car",
+      "slotNumber": 9,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 129",
+      "vehicleType": "Motorbike",
+      "slotNumber": 10,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1210",
+      "vehicleType": "Car",
+      "slotNumber": 11,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1211",
+      "vehicleType": "Motorbike",
+      "slotNumber": 12,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1212",
+      "vehicleType": "Car",
+      "slotNumber": 13,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1213",
+      "vehicleType": "Motorbike",
+      "slotNumber": 14,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1214",
+      "vehicleType": "Car",
+      "slotNumber": 15,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1215",
+      "vehicleType": "Motorbike",
+      "slotNumber": 16,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1216",
+      "vehicleType": "Car",
+      "slotNumber": 17,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1217",
+      "vehicleType": "Motorbike",
+      "slotNumber": 18,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1218",
+      "vehicleType": "Car",
+      "slotNumber": 19,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1219",
+      "vehicleType": "Motorbike",
+      "slotNumber": 20,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1220",
+      "vehicleType": "Car",
+      "slotNumber": 21,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1221",
+      "vehicleType": "Motorbike",
+      "slotNumber": 22,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1222",
+      "vehicleType": "Car",
+      "slotNumber": 23,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1223",
+      "vehicleType": "Motorbike",
+      "slotNumber": 24,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1224",
+      "vehicleType": "Car",
+      "slotNumber": 25,
+      "levelNumber": 1
+    },
+    {
+      "licenseNumber": "XBZ 1225",
+      "vehicleType": "Motorbike",
+      "slotNumber": 26,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1226",
+      "vehicleType": "Car",
+      "slotNumber": 27,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1227",
+      "vehicleType": "Motorbike",
+      "slotNumber": 28,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1228",
+      "vehicleType": "Car",
+      "slotNumber": 29,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1229",
+      "vehicleType": "Motorbike",
+      "slotNumber": 30,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1230",
+      "vehicleType": "Car",
+      "slotNumber": 31,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1231",
+      "vehicleType": "Motorbike",
+      "slotNumber": 32,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1232",
+      "vehicleType": "Car",
+      "slotNumber": 33,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1233",
+      "vehicleType": "Motorbike",
+      "slotNumber": 34,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1234",
+      "vehicleType": "Car",
+      "slotNumber": 35,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1235",
+      "vehicleType": "Motorbike",
+      "slotNumber": 36,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1236",
+      "vehicleType": "Car",
+      "slotNumber": 37,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1237",
+      "vehicleType": "Motorbike",
+      "slotNumber": 38,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1238",
+      "vehicleType": "Car",
+      "slotNumber": 39,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1239",
+      "vehicleType": "Motorbike",
+      "slotNumber": 40,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1240",
+      "vehicleType": "Car",
+      "slotNumber": 41,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1241",
+      "vehicleType": "Motorbike",
+      "slotNumber": 42,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1242",
+      "vehicleType": "Car",
+      "slotNumber": 43,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1243",
+      "vehicleType": "Motorbike",
+      "slotNumber": 44,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1244",
+      "vehicleType": "Car",
+      "slotNumber": 45,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1245",
+      "vehicleType": "Motorbike",
+      "slotNumber": 46,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1246",
+      "vehicleType": "Car",
+      "slotNumber": 47,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1247",
+      "vehicleType": "Motorbike",
+      "slotNumber": 48,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1248",
+      "vehicleType": "Car",
+      "slotNumber": 49,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1249",
+      "vehicleType": "Motorbike",
+      "slotNumber": 50,
+      "levelNumber": 2
+    },
+    {
+      "licenseNumber": "XBZ 1250",
+      "vehicleType": "Car",
+      "slotNumber": 51,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1251",
+      "vehicleType": "Motorbike",
+      "slotNumber": 52,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1252",
+      "vehicleType": "Car",
+      "slotNumber": 53,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1253",
+      "vehicleType": "Motorbike",
+      "slotNumber": 54,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1254",
+      "vehicleType": "Car",
+      "slotNumber": 55,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1255",
+      "vehicleType": "Motorbike",
+      "slotNumber": 56,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1256",
+      "vehicleType": "Car",
+      "slotNumber": 57,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1257",
+      "vehicleType": "Motorbike",
+      "slotNumber": 58,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1258",
+      "vehicleType": "Car",
+      "slotNumber": 59,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1259",
+      "vehicleType": "Motorbike",
+      "slotNumber": 60,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1260",
+      "vehicleType": "Car",
+      "slotNumber": 61,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1261",
+      "vehicleType": "Motorbike",
+      "slotNumber": 62,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1262",
+      "vehicleType": "Car",
+      "slotNumber": 63,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1263",
+      "vehicleType": "Motorbike",
+      "slotNumber": 64,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1264",
+      "vehicleType": "Car",
+      "slotNumber": 65,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1265",
+      "vehicleType": "Motorbike",
+      "slotNumber": 66,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1266",
+      "vehicleType": "Car",
+      "slotNumber": 67,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1267",
+      "vehicleType": "Motorbike",
+      "slotNumber": 68,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1268",
+      "vehicleType": "Car",
+      "slotNumber": 69,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1269",
+      "vehicleType": "Motorbike",
+      "slotNumber": 70,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1270",
+      "vehicleType": "Car",
+      "slotNumber": 71,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1271",
+      "vehicleType": "Motorbike",
+      "slotNumber": 72,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1272",
+      "vehicleType": "Car",
+      "slotNumber": 73,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1273",
+      "vehicleType": "Motorbike",
+      "slotNumber": 74,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1274",
+      "vehicleType": "Car",
+      "slotNumber": 75,
+      "levelNumber": 3
+    },
+    {
+      "licenseNumber": "XBZ 1275",
+      "vehicleType": "Motorbike",
+      "slotNumber": 76,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1276",
+      "vehicleType": "Car",
+      "slotNumber": 77,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1277",
+      "vehicleType": "Motorbike",
+      "slotNumber": 78,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1278",
+      "vehicleType": "Car",
+      "slotNumber": 79,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1279",
+      "vehicleType": "Motorbike",
+      "slotNumber": 80,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1280",
+      "vehicleType": "Car",
+      "slotNumber": 81,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1281",
+      "vehicleType": "Motorbike",
+      "slotNumber": 82,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1282",
+      "vehicleType": "Car",
+      "slotNumber": 83,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1283",
+      "vehicleType": "Motorbike",
+      "slotNumber": 84,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1284",
+      "vehicleType": "Car",
+      "slotNumber": 85,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1285",
+      "vehicleType": "Motorbike",
+      "slotNumber": 86,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1286",
+      "vehicleType": "Car",
+      "slotNumber": 87,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1287",
+      "vehicleType": "Motorbike",
+      "slotNumber": 88,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1288",
+      "vehicleType": "Car",
+      "slotNumber": 89,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1289",
+      "vehicleType": "Motorbike",
+      "slotNumber": 90,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1290",
+      "vehicleType": "Car",
+      "slotNumber": 91,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1291",
+      "vehicleType": "Motorbike",
+      "slotNumber": 92,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1292",
+      "vehicleType": "Car",
+      "slotNumber": 93,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1293",
+      "vehicleType": "Motorbike",
+      "slotNumber": 94,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1294",
+      "vehicleType": "Car",
+      "slotNumber": 95,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1295",
+      "vehicleType": "Motorbike",
+      "slotNumber": 96,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1296",
+      "vehicleType": "Car",
+      "slotNumber": 97,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1297",
+      "vehicleType": "Motorbike",
+      "slotNumber": 98,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1298",
+      "vehicleType": "Car",
+      "slotNumber": 99,
+      "levelNumber": 4
+    },
+    {
+      "licenseNumber": "XBZ 1299",
+      "vehicleType": "Motorbike",
+      "slotNumber": 100,
+      "levelNumber": 4
+    }
+  ]
+}
