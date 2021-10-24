@@ -52,9 +52,10 @@ const MainView: FunctionComponent = () => {
                 break;
             }
             console.log('do filtering by: ', p, filterValue);
+            setVehiclesData(filteredData);
           }
         }
-        setVehiclesData(filteredData);
+
       }
 
       applyFilters()
@@ -72,7 +73,7 @@ const MainView: FunctionComponent = () => {
           return response.json();
         }).then((responseJson) => {
           setData(responseJson);
-          setVehiclesData(responseJson.vehiclesData);
+          setVehiclesData(responseJson.vehicles);
         });
       }
 
