@@ -1,5 +1,21 @@
 # The Garage
 
+## Tech stack
+- React / Typescript
+- SASS / styled-components
+- react-testing-library
+
+### Screenshots
+![Default View](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/no-filters.png)
+![View with applied filters](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/with-filters.png)
+![View with applied filters and search](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/with-search.png)
+
+
+
+### Demo
+:star: [https://the-garage-three.vercel.app/](https://the-garage-three.vercel.app/) :star:
+_note: Filters won't work due to Vercel not allowing to use LocalStorage on the server._
+
 ## Available Scripts
 
 In the project directory, you can run:
