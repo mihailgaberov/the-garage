@@ -75,8 +75,7 @@ const VehiclesList: FunctionComponent<VehiclesListProps> = ({ vehicles }) => {
             handlePaginate={handlePaginate} />
           <ListView vehicles={visibleVehicles} />
         </>
-        :
-        'no data'
+        : 'No data.'
       }
     </Container>
   );
