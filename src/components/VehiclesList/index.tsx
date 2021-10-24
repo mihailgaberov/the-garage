@@ -13,7 +13,7 @@ export enum PaginationDirections {
   'FORWARD'
 }
 
-const VISIBLE_VEHICLES_PAGE_PAGE: number = 10;
+export const VISIBLE_VEHICLES_PAGE_PAGE: number = 10;
 
 const VehiclesList: FunctionComponent<VehiclesListProps> = ({ vehicles }) => {
   const [visibleVehicles, setVisibleVehicles] = useState<VehicleSlotProps[]>([]);
@@ -71,6 +71,7 @@ const VehiclesList: FunctionComponent<VehiclesListProps> = ({ vehicles }) => {
             hasPrev={hasPrevPage(pageNum)}
             hasNext={hasNextPage(pageNum)}
             totalCount={vehicles?.length}
+            pageNum={pageNum + 1}
             handlePaginate={handlePaginate} />
           <ListView vehicles={visibleVehicles} />
         </>

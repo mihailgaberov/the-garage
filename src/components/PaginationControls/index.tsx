@@ -5,6 +5,7 @@ import { PaginationDirections } from "../VehiclesList";
 
 interface PaginationControlsProps {
   totalCount?: number;
+  pageNum: number;
   handlePaginate: (direction: PaginationDirections) => void;
   hasNext: boolean;
   hasPrev: boolean;
@@ -12,13 +13,14 @@ interface PaginationControlsProps {
 
 const PaginationControls: FunctionComponent<PaginationControlsProps> = ({
                                                                           totalCount,
+                                                                          pageNum,
                                                                           handlePaginate,
                                                                           hasNext,
                                                                           hasPrev
                                                                         }) => {
   return (
     <Container>
-      <div className='current-count'><span>1</span><span>10</span></div>
+      <div className='current-count'><span>{pageNum}</span><span>{totalCount && Math.ceil(totalCount / 10)}</span></div>
       <div className='separator'>/</div>
       <div className='total-count'>{totalCount}</div>
       <div className='text'>Vehicles</div>
