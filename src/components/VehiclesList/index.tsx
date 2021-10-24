@@ -1,4 +1,4 @@
-import React, { FunctionComponent, useEffect, useState } from 'react';
+import React, { FunctionComponent, useCallback, useEffect, useState } from 'react';
 import { Container } from "./styles";
 import PaginationControls from "../PaginationControls";
 import ListView from "../ListView";
@@ -18,20 +18,20 @@ const VehiclesList: FunctionComponent<VehiclesListProps> = ({ vehicles }) => {
   const [visibleVehicles, setVisibleVehicles] = useState<VehicleSlotProps[]>([]);
   const [pageNum, setPageNum] = useState(0);
 
+  const setPaginatedVehicles = useCallback((pageNum: number) => {
+    if (vehicles) {
+      setVisibleVehicles(getVisibleVehicles(vehicles, pageNum));
+    }
+  },[vehicles]);
+
   useEffect(() => {
     setPaginatedVehicles(pageNum);
-  }, [vehicles, pageNum])
+  }, [vehicles, pageNum, setPaginatedVehicles])
 
   const getVisibleVehicles = (allVehicles: VehicleSlotProps[], pageNum: number): VehicleSlotProps[] => {
     const startSlice: number = pageNum === 0 ? 0 : pageNum * VISIBLE_VEHICLES_PAGE_PAGE;
     const endSlice: number = startSlice + VISIBLE_VEHICLES_PAGE_PAGE;
     return allVehicles.slice(startSlice, endSlice);
-  };
-
-  const setPaginatedVehicles = (pageNum: number) => {
-    if (vehicles) {
-      setVisibleVehicles(getVisibleVehicles(vehicles, pageNum));
-    }
   };
 
   const handlePaginate = (direction: PaginationDirections) => {
