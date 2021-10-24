@@ -1,11 +1,11 @@
 import React, { FunctionComponent, useEffect, useState } from 'react';
 import { Container } from "./styles";
 import SearchBox from "../SearchBox";
-import Filters from "../Filters";
+import Filters, { Filter } from "../Filters";
 
 interface FiltersContainerProps {
   levelsCount?: number
-  handleFiltering: (e: React.FormEvent<HTMLInputElement>) => void;
+  handleFiltering: (filter: Filter) => void;
 }
 
 const FiltersContainer: FunctionComponent<FiltersContainerProps> = ({ levelsCount, handleFiltering }) => {
@@ -30,7 +30,7 @@ const FiltersContainer: FunctionComponent<FiltersContainerProps> = ({ levelsCoun
 
   return (
     <Container>
-      <SearchBox handleSearch={(e) => console.log('Search for: ', e.currentTarget.value)} />
+      <SearchBox handleSearch={handleFiltering} />
       <Filters title="LEVELS" data={levels} handleFiltering={handleFiltering} />
       <Filters title="TYPE" data={['Car', 'Motorbike']} handleFiltering={handleFiltering} />
     </Container>

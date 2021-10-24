@@ -4,7 +4,12 @@ import { Container } from "./styles";
 interface LevelsProps {
   data: string[];
   title: string;
-  handleFiltering: (e: React.FormEvent<HTMLInputElement>) => void;
+  handleFiltering: (filter: Filter) => void;
+}
+
+export interface Filter {
+  type: string;
+  value: string;
 }
 
 const Filters: FunctionComponent<LevelsProps> = ({ title, data, handleFiltering }) => {
@@ -16,7 +21,7 @@ const Filters: FunctionComponent<LevelsProps> = ({ title, data, handleFiltering 
           <input value={filter}
                  type="radio"
                  name={`${title}`}
-                 onClick={handleFiltering}
+                 onClick={(e) => handleFiltering({type: title, value: e.currentTarget.value})}
           />
             <span className="checkmark"/>
         </label>

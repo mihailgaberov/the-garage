@@ -16,7 +16,7 @@ export const Container = styled.label`
   }
 
   input {
-    padding: 10px 30px;
+    padding: 10px 35px;
     border: none;
     background-color: #fdf1e8;
   }
