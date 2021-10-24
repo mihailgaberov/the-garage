@@ -1,47 +1,34 @@
 import { FilterTypes } from "./index";
 import { Filter } from "../Filters";
-import { readRecord, storeToLocalStorage } from "../../utils/localStorageService";
+import { storeToLocalStorage } from "../../utils/localStorageService";
 
-export const initialState = { vehiclesData: [] , appliedFilters: []};
-const LS_KEY: string = 'vehicles';
-
-const addAppliedFilter = (state: { appliedFilters: string[]; }, filterType: string) => {
-  if (state.appliedFilters.length < 3) {
-    return [...state.appliedFilters, filterType];
-  } else {
-
+export const initialState = {
+  appliedFilters: {
+    SEARCH: '',
+    LEVELS: '',
+    TYPE: ''
   }
-  const [, ...rest] = state.appliedFilters;
-  return [...rest, filterType];
 };
+export const LS_KEY: string = 'vehicles';
 
 const reducer = (state: any, action: Filter) => {
-  const filterType = action.type;
   const value = action.value;
-  const lastAppliedFilter = state.appliedFilters[state.appliedFilters.length - 1];
-  const dataToBeFiltered = lastAppliedFilter === filterType ?
-    { vehiclesData: readRecord(LS_KEY) } :
-    state;
 
   switch (action.type) {
     case FilterTypes.LEVELS:
-      const levelNumber: number = Number(value.split(' ')[1]);
       return {
-        ...dataToBeFiltered,
-        appliedFilters: addAppliedFilter(state, filterType),
-        vehiclesData: dataToBeFiltered.vehiclesData?.filter((vehicle: { levelNumber: number; }) => vehicle.levelNumber === levelNumber)
+        ...state,
+        appliedFilters: {...state.appliedFilters, LEVELS: value }
       };
     case FilterTypes.TYPE:
       return {
-        ...dataToBeFiltered,
-        appliedFilters: addAppliedFilter(state, filterType),
-        vehiclesData: dataToBeFiltered.vehiclesData?.filter((vehicle: { vehicleType: string; }) => vehicle.vehicleType === value)
+        ...state,
+        appliedFilters: {...state.appliedFilters, TYPE: value }
       };
     case FilterTypes.SEARCH:
       return {
-        ...dataToBeFiltered,
-        appliedFilters: addAppliedFilter(state, filterType),
-        vehiclesData: dataToBeFiltered.vehiclesData?.filter((vehicle: { licenseNumber: string; }) => vehicle.licenseNumber.includes(value))
+        ...state,
+        appliedFilters: {...state.appliedFilters, SEARCH: value }
       };
     case FilterTypes.INIT:
       // Store all the vehicles data to the local storage

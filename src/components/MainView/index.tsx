@@ -5,7 +5,8 @@ import Filters from "../FiltersContainer";
 import VehiclesList from "../VehiclesList";
 import { VehicleSlotProps } from "../VehicleSlot";
 import { Filter } from "../Filters";
-import FiltersReducer, { initialState } from "./FiltersReducer";
+import FiltersReducer, { initialState, LS_KEY } from "./FiltersReducer";
+import { readRecord } from "../../utils/localStorageService";
 
 interface GarageData {
   slots: number;
@@ -23,6 +24,41 @@ export const FilterTypes = {
 const MainView: FunctionComponent = () => {
     const [data, setData] = useState<GarageData>();
     const [state, dispatch] = useReducer(FiltersReducer, initialState);
+    const [vehiclesData, setVehiclesData] = useState(data?.vehicles);
+
+    useEffect(() => {
+      function applyFilters() {
+        const data: [] = readRecord(LS_KEY);
+
+        let filteredData: any[] = [];
+        const appliedFilters = state.appliedFilters;
+
+        for (let p in appliedFilters) {
+          const filterValue = appliedFilters[p];
+          if (filterValue) {
+            switch (p) {
+              case FilterTypes.TYPE:
+                filteredData = filteredData.length > 0 ? filteredData?.filter((vehicle: { vehicleType: string; }) => vehicle.vehicleType === filterValue) :
+                  data?.filter((vehicle: { vehicleType: string; }) => vehicle.vehicleType === filterValue)
+                break;
+              case FilterTypes.LEVELS:
+                const levelNumber: string = filterValue.split(' ')[1];
+                filteredData = filteredData.length > 0 ? filteredData?.filter((vehicle: { levelNumber: string; }) => vehicle.levelNumber === levelNumber) :
+                  data?.filter((vehicle: { levelNumber: string; }) => vehicle.levelNumber === levelNumber);
+                break;
+              case FilterTypes.SEARCH:
+                filteredData = filteredData.length > 0 ? filteredData?.filter((vehicle: { licenseNumber: string; }) => vehicle.licenseNumber.includes(filterValue)) :
+                  data?.filter((vehicle: { licenseNumber: string; }) => vehicle.licenseNumber.includes(filterValue));
+                break;
+            }
+            console.log('do filtering by: ', p, filterValue);
+          }
+        }
+        setVehiclesData(filteredData);
+      }
+
+      applyFilters()
+    }, [state]);
 
     useEffect(() => {
       const loadData = () => {
@@ -36,7 +72,7 @@ const MainView: FunctionComponent = () => {
           return response.json();
         }).then((responseJson) => {
           setData(responseJson);
-          dispatch({type: FilterTypes.INIT, value: responseJson.vehicles});
+          setVehiclesData(responseJson.vehiclesData);
         });
       }
 
@@ -50,7 +86,7 @@ const MainView: FunctionComponent = () => {
     return (
       <Container>
         <Filters levelsCount={data?.levels} handleFiltering={handleFiltering} />
-        <VehiclesList vehicles={state.vehiclesData} />
+        <VehiclesList vehicles={vehiclesData} />
       </Container>
     );
   }
