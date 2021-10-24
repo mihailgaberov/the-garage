@@ -42,9 +42,9 @@ const MainView: FunctionComponent = () => {
                   data?.filter((vehicle: { vehicleType: string; }) => vehicle.vehicleType === filterValue)
                 break;
               case FilterTypes.LEVELS:
-                const levelNumber: string = filterValue.split(' ')[1];
-                filteredData = filteredData.length > 0 ? filteredData?.filter((vehicle: { levelNumber: string; }) => vehicle.levelNumber === levelNumber) :
-                  data?.filter((vehicle: { levelNumber: string; }) => vehicle.levelNumber === levelNumber);
+                const levelNumber: number = Number(filterValue.split(' ')[1]);
+                filteredData = filteredData.length > 0 ? filteredData?.filter((vehicle: { levelNumber: number; }) => vehicle.levelNumber === levelNumber) :
+                  data?.filter((vehicle: { levelNumber: number; }) => vehicle.levelNumber === levelNumber);
                 break;
               case FilterTypes.SEARCH:
                 filteredData = filteredData.length > 0 ? filteredData?.filter((vehicle: { licenseNumber: string; }) => vehicle.licenseNumber.includes(filterValue)) :
