@@ -1,5 +1,15 @@
 # The Garage
 
+A simple app implementing a _parking garage_. 
+
+## Functionality:
+ - List all vehicles in the garage. 
+ - The list supports paging.
+ - The list can be filtered by level and/or by type. Multiple filters can be selected, also from
+different categories. Filters within one category are OR connected; filters in different
+categories are AND-connected.
+ - The list can be filtered by typing the license number into the search field.
+
 ## Tech stack
 - React / Typescript
 - SASS / styled-components
@@ -14,6 +24,7 @@
 
 ### Demo
 :star: [https://the-garage-three.vercel.app/](https://the-garage-three.vercel.app/) :star:
+
 _note: Filters won't work due to Vercel not allowing to use LocalStorage on the server._
 
 ## Available Scripts
