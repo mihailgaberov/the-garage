@@ -51,7 +51,6 @@ const MainView: FunctionComponent = () => {
                   data?.filter((vehicle: { licenseNumber: string; }) => vehicle.licenseNumber.includes(filterValue));
                 break;
             }
-            console.log('do filtering by: ', p, filterValue);
             setVehiclesData(filteredData);
           }
         }

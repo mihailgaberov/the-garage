@@ -12,6 +12,7 @@ export enum PaginationDirections {
   'BACK',
   'FORWARD'
 }
+
 const VISIBLE_VEHICLES_PAGE_PAGE: number = 10;
 
 const VehiclesList: FunctionComponent<VehiclesListProps> = ({ vehicles }) => {
@@ -22,7 +23,7 @@ const VehiclesList: FunctionComponent<VehiclesListProps> = ({ vehicles }) => {
     if (vehicles) {
       setVisibleVehicles(getVisibleVehicles(vehicles, pageNum));
     }
-  },[vehicles]);
+  }, [vehicles]);
 
   useEffect(() => {
     setPaginatedVehicles(pageNum);
@@ -54,10 +55,28 @@ const VehiclesList: FunctionComponent<VehiclesListProps> = ({ vehicles }) => {
     }
   };
 
+  const hasPrevPage = (pageNum: number) => {
+    return pageNum > 0;
+  };
+
+  const hasNextPage = (pageNum: number) => {
+    return !!(vehicles && pageNum + 1 < vehicles?.length / VISIBLE_VEHICLES_PAGE_PAGE);
+  };
+
   return (
     <Container>
-      <PaginationControls totalCount={vehicles?.length} handlePaginate={handlePaginate} />
-      <ListView vehicles={visibleVehicles} />
+      {vehicles ?
+        <>
+          <PaginationControls
+            hasPrev={hasPrevPage(pageNum)}
+            hasNext={hasNextPage(pageNum)}
+            totalCount={vehicles?.length}
+            handlePaginate={handlePaginate} />
+          <ListView vehicles={visibleVehicles} />
+        </>
+        :
+        'no data'
+      }
     </Container>
   );
 };
