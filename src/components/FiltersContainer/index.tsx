@@ -7,9 +7,10 @@ interface FiltersContainerProps {
   levelsCount?: number
   handleFiltering: (filter: Filter) => void;
   resetFilters: () => void;
+  isReset: boolean;
 }
 
-const FiltersContainer: FunctionComponent<FiltersContainerProps> = ({ levelsCount, handleFiltering, resetFilters }) => {
+const FiltersContainer: FunctionComponent<FiltersContainerProps> = ({ levelsCount, handleFiltering, resetFilters, isReset }) => {
 
   const [levels, setLevels] = useState<string[]>([]);
 
@@ -31,9 +32,9 @@ const FiltersContainer: FunctionComponent<FiltersContainerProps> = ({ levelsCoun
 
   return (
     <Container>
-      <SearchBox handleSearch={handleFiltering} />
-      <Filters title="LEVELS" data={levels} handleFiltering={handleFiltering} />
-      <Filters title="TYPE" data={['Car', 'Motorbike']} handleFiltering={handleFiltering} />
+      <SearchBox handleSearch={handleFiltering} isReset={isReset} />
+      <Filters title="LEVELS" data={levels} handleFiltering={handleFiltering} isReset={isReset} />
+      <Filters title="TYPE" data={['Car', 'Motorbike']} handleFiltering={handleFiltering} isReset={isReset} />
       <button onClick={resetFilters} type='reset'>Reset Filters</button>
     </Container>
   );

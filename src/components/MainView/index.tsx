@@ -26,6 +26,7 @@ const MainView: FunctionComponent = () => {
     const [data, setData] = useState<GarageData>();
     const [state, dispatch] = useReducer(FiltersReducer, initialState);
     const [vehiclesData, setVehiclesData] = useState(data?.vehicles);
+    const [resetFilters, setResetFilters] = useState(true);
 
     useEffect(() => {
       function applyFilters() {
@@ -81,16 +82,18 @@ const MainView: FunctionComponent = () => {
 
     const handleFiltering = (filter: Filter) => {
       dispatch(filter);
+      setResetFilters(false);
     };
 
     const handleResetFilters = () => {
       dispatch({type: FilterTypes.RESET, value: ''});
       setVehiclesData(data?.vehicles);
+      setResetFilters(true);
     };
 
     return (
       <Container>
-        <Filters resetFilters={handleResetFilters} levelsCount={data?.levels} handleFiltering={handleFiltering} />
+        <Filters isReset={resetFilters} resetFilters={handleResetFilters} levelsCount={data?.levels} handleFiltering={handleFiltering} />
         <VehiclesList vehicles={vehiclesData} />
       </Container>
     );
