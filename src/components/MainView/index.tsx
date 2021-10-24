@@ -18,7 +18,8 @@ export const FilterTypes = {
   INIT: 'INIT',
   TYPE: 'TYPE',
   LEVELS: 'LEVELS',
-  SEARCH: 'SEARCH'
+  SEARCH: 'SEARCH',
+  RESET: 'RESET'
 };
 
 const MainView: FunctionComponent = () => {
@@ -54,7 +55,6 @@ const MainView: FunctionComponent = () => {
             setVehiclesData(filteredData);
           }
         }
-
       }
 
       applyFilters()
@@ -83,9 +83,14 @@ const MainView: FunctionComponent = () => {
       dispatch(filter);
     };
 
+    const handleResetFilters = () => {
+      dispatch({type: FilterTypes.RESET, value: ''});
+      setVehiclesData(data?.vehicles);
+    };
+
     return (
       <Container>
-        <Filters levelsCount={data?.levels} handleFiltering={handleFiltering} />
+        <Filters resetFilters={handleResetFilters} levelsCount={data?.levels} handleFiltering={handleFiltering} />
         <VehiclesList vehicles={vehiclesData} />
       </Container>
     );

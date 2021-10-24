@@ -6,9 +6,10 @@ import Filters, { Filter } from "../Filters";
 interface FiltersContainerProps {
   levelsCount?: number
   handleFiltering: (filter: Filter) => void;
+  resetFilters: () => void;
 }
 
-const FiltersContainer: FunctionComponent<FiltersContainerProps> = ({ levelsCount, handleFiltering }) => {
+const FiltersContainer: FunctionComponent<FiltersContainerProps> = ({ levelsCount, handleFiltering, resetFilters }) => {
 
   const [levels, setLevels] = useState<string[]>([]);
 
@@ -33,6 +34,7 @@ const FiltersContainer: FunctionComponent<FiltersContainerProps> = ({ levelsCoun
       <SearchBox handleSearch={handleFiltering} />
       <Filters title="LEVELS" data={levels} handleFiltering={handleFiltering} />
       <Filters title="TYPE" data={['Car', 'Motorbike']} handleFiltering={handleFiltering} />
+      <button onClick={resetFilters} type='reset'>Reset Filters</button>
     </Container>
   );
 };

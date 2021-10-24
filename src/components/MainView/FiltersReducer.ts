@@ -38,6 +38,16 @@ const reducer = (state: any, action: Filter) => {
         ...state,
         vehiclesData: value
       };
+    case FilterTypes.RESET:
+      return {
+        ...state,
+        appliedFilters: {
+          ...state.appliedFilters,
+          SEARCH: false,
+          TYPE: false,
+          LEVELS: false
+        }
+      };
     default:
       return state;
   }
