@@ -19,7 +19,12 @@ categories are AND-connected.
 ![Default View](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/no-filters.png)
 ![View with applied filters](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/with-filters.png)
 ![View with applied filters and search](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/with-search.png)
-
+![iPad](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/ipad.png)
+![iPhone](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/iphone.png)
+![iPhone X](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/iphone_x.png)
+![iPhone Landscape View](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/iphone_landscape.png)
+![iPhone 11 (real device) Filters view](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/iphone_11_filters_view.jpg)
+![iPhone 11 (real device) List view](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/iphone_11_list_view.jpg)
 
 
 ### Demo
