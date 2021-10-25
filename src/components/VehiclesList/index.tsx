@@ -1,5 +1,4 @@
 import React, { FunctionComponent, useCallback, useEffect, useState } from 'react';
-import { Container } from "./styles";
 import PaginationControls from "../PaginationControls";
 import ListView from "../ListView";
 import { VehicleSlotProps } from "../VehicleSlot";
@@ -64,7 +63,7 @@ const VehiclesList: FunctionComponent<VehiclesListProps> = ({ vehicles }) => {
   };
 
   return (
-    <Container>
+    <div>
       {vehicles ?
         <>
           <PaginationControls
@@ -77,7 +76,7 @@ const VehiclesList: FunctionComponent<VehiclesListProps> = ({ vehicles }) => {
         </>
         : 'No data.'
       }
-    </Container>
+    </div>
   );
 };
 
