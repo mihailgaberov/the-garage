@@ -6,7 +6,8 @@ export const Container = styled.div`
   grid-template-rows: auto;
   grid-gap: 1em;
   transition: all 1s;
-  
+  padding: 1em;
+
   button {
     background: none;
     border: none;
@@ -14,7 +15,7 @@ export const Container = styled.div`
     text-align: left;
     cursor: pointer;
   }
-  
+
   @media only screen and (min-width: 920px) {
     display: flex;
     flex-direction: column;
