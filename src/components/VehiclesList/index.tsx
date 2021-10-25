@@ -2,6 +2,7 @@ import React, { FunctionComponent, useCallback, useEffect, useState } from 'reac
 import PaginationControls from "../PaginationControls";
 import ListView from "../ListView";
 import { VehicleSlotProps } from "../VehicleSlot";
+import { Container } from "./styles";
 
 interface VehiclesListProps {
   vehicles?: VehicleSlotProps[];
@@ -63,7 +64,7 @@ const VehiclesList: FunctionComponent<VehiclesListProps> = ({ vehicles }) => {
   };
 
   return (
-    <div>
+    <Container>
       {vehicles ?
         <>
           <PaginationControls
@@ -76,7 +77,7 @@ const VehiclesList: FunctionComponent<VehiclesListProps> = ({ vehicles }) => {
         </>
         : 'No data.'
       }
-    </div>
+    </Container>
   );
 };
 

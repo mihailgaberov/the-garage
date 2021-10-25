@@ -3,7 +3,11 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   align-items: center;
-  width: 586px;
+  width: 100%;
+  
+  @media only screen and (min-width: 920px) {
+    width: 586px;
+  }
   
   .current-count {
     font-size: 1em;
