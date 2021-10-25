@@ -1,6 +1,5 @@
 import { FilterTypes } from "./index";
 import { Filter } from "../Filters";
-import { storeToLocalStorage } from "../../utils/localStorageService";
 
 export const initialState = {
   appliedFilters: {
@@ -9,7 +8,6 @@ export const initialState = {
     TYPE: ''
   }
 };
-export const LS_KEY: string = 'vehicles';
 
 const reducer = (state: any, action: Filter) => {
   const value = action.value;
@@ -29,14 +27,6 @@ const reducer = (state: any, action: Filter) => {
       return {
         ...state,
         appliedFilters: {...state.appliedFilters, SEARCH: value }
-      };
-    case FilterTypes.INIT:
-      // Store all the vehicles data to the local storage
-      storeToLocalStorage(LS_KEY, value);
-
-      return {
-        ...state,
-        vehiclesData: value
       };
     case FilterTypes.RESET:
       return {

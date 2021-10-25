@@ -5,8 +5,8 @@ import Filters from "../FiltersContainer";
 import VehiclesList from "../VehiclesList";
 import { VehicleSlotProps } from "../VehicleSlot";
 import { Filter } from "../Filters";
-import FiltersReducer, { initialState, LS_KEY } from "./FiltersReducer";
-import { readRecord } from "../../utils/localStorageService";
+import FiltersReducer, { initialState } from "./FiltersReducer";
+import { readRecord, storeToLocalStorage } from "../../utils/localStorageService";
 
 interface GarageData {
   slots: number;
@@ -15,12 +15,13 @@ interface GarageData {
 }
 
 export const FilterTypes = {
-  INIT: 'INIT',
   TYPE: 'TYPE',
   LEVELS: 'LEVELS',
   SEARCH: 'SEARCH',
   RESET: 'RESET'
 };
+
+const LS_KEY: string = 'vehicles';
 
 const MainView: FunctionComponent = () => {
     const [data, setData] = useState<GarageData>();
@@ -72,8 +73,12 @@ const MainView: FunctionComponent = () => {
         ).then((response) => {
           return response.json();
         }).then((responseJson) => {
+          const vehicleData = responseJson.vehicles;
           setData(responseJson);
-          setVehiclesData(responseJson.vehicles);
+          setVehiclesData(vehicleData);
+          // Store all the vehicles data to the local storage
+          storeToLocalStorage(LS_KEY, vehicleData);
+
         });
       }
 
