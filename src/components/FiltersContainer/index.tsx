@@ -10,9 +10,13 @@ interface FiltersContainerProps {
   isReset: boolean;
 }
 
-const FiltersContainer: FunctionComponent<FiltersContainerProps> = ({ levelsCount, handleFiltering, resetFilters, isReset }) => {
-
-  const [levels, setLevels] = useState<string[]>([]);
+const FiltersContainer: FunctionComponent<FiltersContainerProps> = ({
+                                                                      levelsCount,
+                                                                      handleFiltering,
+                                                                      resetFilters,
+                                                                      isReset
+                                                                    }) => {
+  const [ levels, setLevels ] = useState<string[]>([]);
 
   useEffect(() => {
     const generateLevelsFilterOptions = (levelsCount: number) => {
@@ -28,16 +32,15 @@ const FiltersContainer: FunctionComponent<FiltersContainerProps> = ({ levelsCoun
     if (levelsCount) {
       generateLevelsFilterOptions(levelsCount);
     }
-  }, [levelsCount]);
+  }, [ levelsCount ]);
 
   return (
     <Container>
       <SearchBox handleSearch={handleFiltering} isReset={isReset} />
-      <Filters title="LEVELS" data={levels} handleFiltering={handleFiltering} isReset={isReset} />
-      <Filters title="TYPE" data={['Car', 'Motorbike']} handleFiltering={handleFiltering} isReset={isReset} />
       <button onClick={resetFilters} type='reset'>Reset Filters</button>
+      <Filters title="LEVELS" data={levels} handleFiltering={handleFiltering} isReset={isReset} />
+      <Filters title="TYPE" data={[ 'Car', 'Motorbike' ]} handleFiltering={handleFiltering} isReset={isReset} />
     </Container>
   );
 };
-
 export default FiltersContainer;
