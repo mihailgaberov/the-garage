@@ -102,7 +102,6 @@ const MainView: FunctionComponent = () => {
         <VehiclesList vehicles={vehiclesData} />
       </Container>
     );
-  }
-;
+  };
 
 export default MainView;

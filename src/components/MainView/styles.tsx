@@ -2,7 +2,13 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-around;
-  width: 1000px;
-  margin: 0 auto;
+  flex-direction: column;
+  width: 100%;
+
+  @media only screen and (min-width: 920px) {
+    margin: 0 auto;
+    width: 1000px;
+    flex-direction: row;
+    justify-content: space-around;
+  }
 `
