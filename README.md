@@ -23,8 +23,8 @@ categories are AND-connected.
 ![iPhone](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/iphone.png)
 ![iPhone X](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/iphone_x.png)
 ![iPhone Landscape View](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/iphone_landscape.png)
-![iPhone 11 (real device) Filters view](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/iphone_11_filters_view.jpg)
-![iPhone 11 (real device) List view](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/iphone_11_list_view.jpg)
+![iPhone 11 (real device) Filters view](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/iphone11_filters_view.jpg)
+![iPhone 11 (real device) List view](https://github.com/mihailgaberov/the-garage/blob/main/screenshots/iphone11_list_view.jpg)
 
 
 ### Demo
