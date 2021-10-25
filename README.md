@@ -1,5 +1,7 @@
 # The Garage
 
+[![CI](https://github.com/mihailgaberov/the-garage/actions/workflows/tests.yml/badge.svg)](https://github.com/mihailgaberov/the-garage/actions/workflows/tests.yml)
+
 A simple app implementing a _parking garage_. 
 
 ## Functionality:
