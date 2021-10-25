@@ -25,9 +25,6 @@ categories are AND-connected.
 ### Demo
 :star: [https://the-garage-three.vercel.app/](https://the-garage-three.vercel.app/) :star:
 
-_Note: Filters won't work online due to [Vercel](https://vercel.com/) not allowing to use LocalStorage on the server.
-If you want to see them in action, please run the app locally._
-
 ## Available Scripts
 
 In the project directory, you can run:
