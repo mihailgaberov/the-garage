@@ -41,7 +41,6 @@ const reducer = (state: any, action: Filter) => {
     default:
       return state;
   }
-
 };
 
 export default reducer;

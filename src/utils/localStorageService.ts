@@ -21,12 +21,6 @@ export const updateRecord = (key: string, value: string): { error?: string } | v
   localStorage.setItem(key, JSON.stringify(value));
 };
 
-// Delete a record
-export const deleteRecord = (key: string): { error?: string } | void => {
-  if (!key) { return { error: 'Delete from localStorage failed. Invalid key.' }; }
-  localStorage.removeItem(key)
-};
-
 // Check for support
 export const isLocalStorageSupported = (): boolean => !!window.localStorage;
 
