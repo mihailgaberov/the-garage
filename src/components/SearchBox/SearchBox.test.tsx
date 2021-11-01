@@ -6,7 +6,7 @@ import SearchBox from './index';
 
 test('renders SearchBox component that reacts on typing', () => {
   const handleTyping = jest.fn()
-  render(<SearchBox handleSearch={handleTyping} />);
+  render(<SearchBox handleSearch={handleTyping}  isReset/>);
   userEvent.type(screen.getByRole('textbox'), 'M - X 897')
   expect(handleTyping).toHaveBeenCalledTimes(9)
 });
